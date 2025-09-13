@@ -11,12 +11,12 @@ int main(int argc, char const *argv[])
 
     for (int i = 0; i < notas_length; i++)
     {
-        printf("%.2f ", notas[i]);
+        printf("%.1f ", notas[i]);
         media_notas += notas[i];
     }
 
     media_notas = media_notas/notas_length;
     printf("\nMédia das notas: %.2f\n\n", media_notas);
-    
+
     return 0;
 }
