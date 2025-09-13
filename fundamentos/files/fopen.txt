@@ -1,0 +1,4 @@
+Este arquivo foi escrito
+usando linguagem C.
+
+Adicionando conteúdo...

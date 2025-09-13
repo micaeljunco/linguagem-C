@@ -1,0 +1,4 @@
+Esse arquivo é um
+arquivo de teste para
+mexer com a leitura e escrita de
+arquivos em C
