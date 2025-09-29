@@ -75,32 +75,34 @@ void media_veiculos(int n_veiculos[5])
 
     media_veiculos /= 5;
 
-    printf("Média: %.2f%%\n", media_veiculos);
+    printf("Média: %.2f\n", media_veiculos);
     
 }
 
 int media_acidentes(int n_veiculos[5], int n_vitimas[5])
 {
-    float media_acidentes = 0;
-    int cont;
+    float soma_acidentes = 0;
+    int cont = 0;
 
-    printf("------ Média de acidentes em cidades com mais de 2000 veículos ------\n");
+    printf("------ Média de acidentes em cidades com MENOS de 2000 veículos ------\n");
 
     for (size_t i = 0; i < 5; i++)
     {
-        if (n_veiculos > 2000)
-        media_acidentes += n_vitimas[i];
+        if (n_veiculos[i] < 2000)
+        {
+            soma_acidentes += n_vitimas[i];
+            cont++;
+        }
     }
 
-    if (media_veiculos == 0)
+    if (cont == 0)
     {
-        printf("Sem média pra calcular.\n");
+        printf("Não há cidades com menos de 2000 veículos.\n");
         return 1;
     }
 
-    media_acidentes /= 5;
+    float media_acidentes = soma_acidentes / cont;
     
-    printf("Média: %.2f%%\n", media_veiculos);
+    printf("Média: %.2f\n", media_acidentes);
     return 0;
-
 }
